@@ -21,6 +21,11 @@
   gap: 80px;
   align-items: center;
 }
+@media (max-width: 992px) {
+  .about-inner { grid-template-columns: 1fr; gap: 48px; }
+  .about-content { text-align: center; }
+  .btn-rose-glow { align-self: center; }
+}
 .doctor-card-wrapper {
   display: flex;
   flex-direction: column;
@@ -142,6 +147,11 @@
   transition: var(--transition);
 }
 .stat-link:hover { gap: 10px; color: var(--white); }
+
+@media (max-width: 480px) {
+  .about-stats-grid { grid-template-columns: 1fr; }
+  .stat-card { height: auto; padding: 24px; min-height: 180px; }
+}
 
 .clinic-img-card { padding: 0; }
 .clinic-img-overlay {
@@ -320,11 +330,14 @@
 .timeline-content p { font-size: .88rem; color: rgba(255,255,255,0.7); line-height: 1.6; }
 
 @media (max-width: 768px) {
-  .vm-grid { grid-template-columns: 1fr; }
-  .timeline::after { left: 31px; }
-  .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
-  .timeline-item::after { left: 21px; }
-  .right { left: 0; }
+  .timeline::after { left: 20px; }
+  .timeline-item { width: 100%; padding-left: 50px; padding-right: 0; text-align: left; margin-bottom: 24px; }
+  .timeline-item::after { left: 10px; right: auto; top: 38px; }
+  .left, .right { left: 0; text-align: left; }
+  .timeline-content { padding: 20px; }
+  
+  .vm-grid { grid-template-columns: 1fr; gap: 20px; }
+  .vm-card { padding: 30px 20px; }
 }
 
 /* ── Responsive ─────────────────────────────────────────────── */
@@ -332,11 +345,14 @@
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 768px) {
-  .about-inner { grid-template-columns: 1fr; gap: 40px; }
-  .about-stats-row { grid-template-columns: 1fr; }
+  .about-main { padding: 60px 0; }
+  .values, .team, .vision-mission, .journey { padding: 60px 0; }
 }
+
 @media (max-width: 480px) {
   .values-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
+  .team-img { height: 280px; }
 }

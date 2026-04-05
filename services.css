@@ -83,5 +83,16 @@ a.category-label:hover {
 .service-link:hover { color: var(--rose-dark); gap: 10px; }
 
 /* ── Responsive ─────────────────────────────────────────────── */
-@media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .services-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1024px) {
+  .services-grid, .services-main-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .services-page { padding: 60px 0; }
+  .category-label { margin-left: auto; margin-right: auto; }
+  .services-category { text-align: center; }
+}
+
+@media (max-width: 580px) {
+  .services-grid, .services-main-grid { grid-template-columns: 1fr; }
+}
