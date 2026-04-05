@@ -1,0 +1,87 @@
+/* services.css – Layanan page specific styles */
+
+/* ── Services Page ──────────────────────────────────────────── */
+.services-page { padding: 80px 0; background: var(--white); }
+
+.services-category { margin-bottom: 60px; }
+.services-category:last-child { margin-bottom: 0; }
+
+.category-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gradient-rose);
+  color: var(--white);
+  font-size: .88rem;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  text-decoration: none;
+  transition: var(--transition);
+}
+a.category-label:hover {
+  opacity: .85;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(107,16,48,.35);
+}
+
+.services-grid, .services-main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.service-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px 22px;
+  transition: var(--transition);
+  background: var(--white);
+}
+.service-card:hover {
+  border-color: var(--rose);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+.service-icon-wrap {
+  width: 52px; height: 52px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 133, 186, .1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--rose);
+  margin-bottom: 16px;
+  transition: var(--transition);
+}
+.service-card:hover .service-icon-wrap { background: var(--rose); color: var(--white); }
+.service-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--dark);
+  font-family: var(--font-serif);
+}
+.service-card p {
+  font-size: .84rem;
+  color: var(--gray-text);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+.service-link {
+  font-size: .84rem;
+  font-weight: 600;
+  color: var(--rose);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+.service-link:hover { color: var(--rose-dark); gap: 10px; }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .services-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,232 @@
+/* service-detail.css – shared styles for all service detail pages */
+
+/* ── Service Intro ──────────────────────────────────────────── */
+.service-intro {
+  padding: 80px 0 60px;
+  background: var(--white);
+}
+.service-intro-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.service-intro-img {
+  height: 380px;
+  border-radius: var(--radius-lg);
+  background: var(--gradient-soft);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  color: var(--rose);
+  opacity: .45;
+  box-shadow: var(--shadow-md);
+}
+.service-intro-content .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 133, 186, .1);
+  color: var(--rose);
+  font-size: .82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+.service-intro-content h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+.service-intro-content h2 em { font-style: italic; color: var(--rose); }
+.service-intro-content p {
+  font-size: .95rem;
+  color: var(--gray-text);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+.service-intro-content .btn { margin-top: 8px; }
+
+/* ── Benefits Bar ────────────────────────────────────────────── */
+.benefits-bar {
+  background: var(--gradient-rose);
+  padding: 60px 0;
+}
+.benefits-inner {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+}
+.benefit-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 32px;
+  color: var(--white);
+}
+.benefit-item + .benefit-item {
+  border-left: 1px solid rgba(255,255,255,.2);
+}
+.benefit-icon {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.benefit-item h4 { font-size: .88rem; font-weight: 700; margin-bottom: 3px; }
+.benefit-item p { font-size: .78rem; opacity: .75; line-height: 1.4; }
+
+/* ── Detail Cards ────────────────────────────────────────────── */
+.detail-cards-section {
+  padding: 80px 0;
+  background: var(--light-bg);
+}
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-sub { color: var(--gray-text); font-size: .92rem; margin-top: 10px; max-width: 520px; margin-left: auto; margin-right: auto; }
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.detail-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  display: flex;
+  gap: 22px;
+  transition: var(--transition);
+}
+.detail-card:hover {
+  border-color: var(--rose);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.detail-card-icon {
+  width: 56px; height: 56px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 133, 186, .1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--rose);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.detail-card:hover .detail-card-icon { background: var(--rose); color: var(--white); }
+.detail-card-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+  font-family: var(--font-serif);
+}
+.detail-card-body p {
+  font-size: .87rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.detail-price {
+  display: block;
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--rose);
+  margin-bottom: 16px;
+}
+.detail-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--rose);
+  background: rgba(255, 133, 186, .1);
+  border: 1px solid rgba(255, 133, 186, .2);
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+/* ── Process Steps ────────────────────────────────────────────── */
+.process-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  margin-top: 48px;
+}
+.steps-row::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: calc(12.5% + 28px);
+  right: calc(12.5% + 28px);
+  height: 2px;
+  background: var(--border);
+  z-index: 0;
+}
+.step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.step-num {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--rose);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 6px 20px rgba(0, 26, 75, .15);
+}
+.step h4 { font-size: .92rem; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
+.step p { font-size: .82rem; color: var(--gray-text); line-height: 1.6; }
+
+/* ── Back nav ─────────────────────────────────────────────────── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--rose);
+  font-size: .88rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+.back-link:hover { gap: 4px; }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .detail-grid { grid-template-columns: 1fr; }
+  .steps-row { grid-template-columns: repeat(2, 1fr); }
+  .steps-row::before { display: none; }
+}
+@media (max-width: 768px) {
+  .service-intro-inner { grid-template-columns: 1fr; }
+  .service-intro-img { height: 240px; }
+  .benefits-inner { flex-direction: column; }
+  .benefit-item + .benefit-item { border-left: none; border-top: 1px solid rgba(255,255,255,.2); padding-top: 20px; margin-top: 4px; }
+  .detail-card { flex-direction: column; gap: 14px; }
+}
+@media (max-width: 480px) {
+  .steps-row { grid-template-columns: 1fr; }
+}
